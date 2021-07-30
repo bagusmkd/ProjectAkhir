@@ -1,0 +1,34 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{judul}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="uk-flex">
+            <span class="uk-width-expand"></span>
+            <button mat-flat-button color="primary" (click)="TambahJadwal({},-1)">Tambah Data</button>
+        </div>
+        <table class="uk-table uk-table-middle uk-table-divider">
+            <thead>
+                <th>Jam</th>
+                <th>Hari</th>
+                <th>Matakuliah</th>
+                <th>Ruangan</th>
+                <th>Dosen</th>
+                <th>Edit</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let jadwal of jadwals; let idx=index">
+                    <td>{{jadwal.jam}}</td>
+                    <td>{{jadwal.hari}}</td>
+                    <td>{{jadwal.matkul}}</td>
+                    <td>{{jadwal.ruangan}}</td>
+                    <td>{{jadwal.dosen}}</td>
+                    <td >
+                        <button mat-button color="primary" (click)="TambahJadwal(jadwal,idx)" >Edit</button>
+                        <button mat-button color="warn"(click)="hapusdata(jadwal.id,idx)" >Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </mat-card-content>
+</mat-card>

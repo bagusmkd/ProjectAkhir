@@ -1,0 +1,46 @@
+<ng-container>
+    <mat-toolbar class="example-header" color="primary" position:relative; >
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>Kelas Sistem Informasi</span>
+        <div class="uk-width-expand"></div>
+        <button mat-icon-button (click)="logout()">Sig Out</button>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="admin-container" > 
+        <mat-sidenav
+        #sidenav
+        mode="side"
+        [position]="'start'"
+        opened
+        class="sidenav-left"
+        [fixedTopGap]="64"
+        [fixedBottomGap]="0"
+        [fixedInViewport]="true"
+        style="background-color: #424242;">
+         
+         <mat-nav-list  >
+            <mat-list-item routerLink="/admin/dashboard">
+                <mat-icon matListIcon style="color: rgb(255, 255, 255);">dashboard</mat-icon>
+                <h3 matLine>Dashboard</h3>
+            </mat-list-item>
+            <mat-list-item routerLink="/admin/data">
+                <mat-icon matListIcon style="color: rgb(255, 255, 255);">assignment_ind</mat-icon>
+                <h3 matLine>Data Mahasiswa</h3>
+            </mat-list-item>
+            <mat-list-item routerLink="/admin/jadwal">
+                <mat-icon matListIcon style="color: rgb(255, 255, 255);">table_chart</mat-icon>
+                <h3 matLine>Jadwal Kuliah</h3>
+            </mat-list-item>
+         </mat-nav-list>
+        </mat-sidenav>
+
+        <mat-sidenav-content style="padding: 5px; background-color: #ccc;" >
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+
+    </mat-sidenav-container>
+        
+   
+</ng-container>

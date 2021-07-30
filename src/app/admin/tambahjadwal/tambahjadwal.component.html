@@ -1,0 +1,29 @@
+<h3 mat-dialog-title>
+    Tambah Data Jadwal Kuliah
+ </h3>
+ <div mat-dialog-content>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>JAM</mat-label>
+        <input matInput [(ngModel)]="data.jam">      
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>HARI</mat-label>
+        <input matInput [(ngModel)]="data.hari" >     
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>MATA KULIAH</mat-label>
+        <input matInput  [(ngModel)] ="data.matkul" >     
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>RUANGAN</mat-label>
+        <input matInput [(ngModel)]="data.ruangan" >     
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>DOSSEN</mat-label>
+        <input matInput [(ngModel)]="data.dosen" >     
+    </mat-form-field>
+ </div>
+ <div mat-dialog-actions align="end">
+ <button mat-button mat-dialog-close>Batal</button>
+ <button mat-flat-button (click)="saveData()" >Simpan</button>
+ </div>

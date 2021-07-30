@@ -1,0 +1,33 @@
+<h3 mat-dialog-title>
+    Tambah Data Mahasiswa
+ </h3>
+ <div mat-dialog-content>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Nama Mahasiswa</mat-label>
+        <input matInput [(ngModel)]="data.nama">      
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>NIM</mat-label>
+        <input matInput type="number" [(ngModel)]="data.nim" >     
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Tanggal Lahir</mat-label>
+        <input matInput  [(ngModel)] ="data.tanggal" >     
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Alamat</mat-label>
+        <input matInput [(ngModel)]="data.alamat" >     
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Prodi</mat-label>
+        <input matInput [(ngModel)]="data.prodi" >     
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Kelas</mat-label>
+        <input matInput [(ngModel)]="data.kelas" >      
+    </mat-form-field>
+ </div>
+ <div mat-dialog-actions align="end">
+ <button mat-button mat-dialog-close>Batal</button>
+ <button mat-flat-button (click)="saveData()" >Simpan</button>
+ </div>

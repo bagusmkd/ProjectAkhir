@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tugas-akhir-2826e": {
+      "hosting": {
+        "TugasAngular": [
+          "tugas-akhir-2826e"
+        ]
+      }
+    }
+  }
+}

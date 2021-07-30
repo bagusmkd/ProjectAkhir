@@ -1,0 +1,42 @@
+<div class="app-container">
+<ng-container>
+    <mat-card>
+    <mat-card-header>
+        <mat-card-title>{{judul}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="uk-flex">
+            <span class="uk-width-expand"></span>
+            <button mat-flat-button color="primary" (click)="TambahData({},-1)">Tambah Data</button>
+        </div>
+        <table class="uk-table uk-table-middle uk-table-divider">
+            <thead>
+                <th>No</th>
+                <th>Nama</th>
+                <th>NIM</th>
+                <th>Tanggal Lahir</th>
+                <th>Alamat</th>
+                <th>Prodi</th>
+                <th>Kelas</th>
+                <th >Edit data</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let mahasiswa of mahasiswas; let idx=index">
+                    <td>{{idx+1}}</td>
+                    <td>{{mahasiswa.nama}}</td>
+                    <td>{{mahasiswa.nim}}</td>
+                    <td>{{mahasiswa.tanggal}}</td>
+                    <td>{{mahasiswa.alamat}}</td>
+                    <td>{{mahasiswa.prodi}}</td>
+                    <td>{{mahasiswa.kelas}}</td>
+                    <td >
+                        <button mat-button color="primary" (click)="TambahData(mahasiswa,idx)">Edit</button>
+                        <button mat-button color="warn" (click)="hapusdata(mahasiswa.id,idx)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </mat-card-content>
+    </mat-card>
+</ng-container>
+</div>
